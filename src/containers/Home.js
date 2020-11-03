@@ -3,7 +3,7 @@ import { PageHeader, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useAppContext } from "../libs/contextLib";
 import { onError } from "../libs/errorLib";
 import { LinkContainer } from "react-router-bootstrap";
-import { API, Auth } from "aws-amplify";
+import { API} from "aws-amplify";
 
 import "./Home.css";
 

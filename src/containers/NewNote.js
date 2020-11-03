@@ -5,7 +5,7 @@ import LoaderButton from "../components/LoaderButton";
 import { onError } from "../libs/errorLib";
 import config from "../config";
 import "./NewNote.css";
-import { API, Auth } from "aws-amplify";
+import { API} from "aws-amplify";
 import { s3Upload } from "../libs/awsLib";
 
 
