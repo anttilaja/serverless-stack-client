@@ -6,7 +6,7 @@ import { FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import LoaderButton from "../components/LoaderButton";
 import config from "../config";
 import "./Notes.css";
-import { s3Upload } from "../libs/awsLib";
+import { s3Upload, s3Remove } from "../libs/awsLib";
 
 
 
@@ -94,7 +94,12 @@ async function handleSubmit(event) {
 }
 
 
-function deleteNote() {
+async function deleteNote() {
+  if(note.attachment)
+  {
+    console.log("file removed:"+ note.attachment)
+    await s3Remove(note.attachment);
+  }
   return API.del("notes", `/notes/${id}`);
 }
 

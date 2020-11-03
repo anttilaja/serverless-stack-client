@@ -9,3 +9,10 @@ export async function s3Upload(file) {
 
   return stored.key;
 }
+
+
+
+export async function s3Remove(fileName) {
+  await Storage.vault.remove(fileName);
+  return ;
+}
