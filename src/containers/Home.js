@@ -33,9 +33,9 @@ export default function Home() {
   onLoad();
 }, [isAuthenticated]);
 
-	function loadNotes2() {
+	/*function loadNotes2() {
 	  	return API.get("notes", "/notes");
-	}
+	}*/
 
   function loadNotes() {
   return API.get("notes", "/invalid_path");
