@@ -33,13 +33,11 @@ export default function Home() {
   onLoad();
 }, [isAuthenticated]);
 
-	/*function loadNotes2() {
-	  	return API.get("notes", "/notes");
-	}*/
+	
 
   function loadNotes() 
   {
-    return API.put("notes", "/notes");
+    return API.get("notes", "/notes");
   }
 
 
