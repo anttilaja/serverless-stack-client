@@ -37,9 +37,11 @@ export default function Home() {
 	  	return API.get("notes", "/notes");
 	}*/
 
-  function loadNotes() {
-  return API.get("notes", "/invalid_path");
+  function loadNotes() 
+  {
+    return API.put("notes", "/notes");
   }
+
 
 
 
