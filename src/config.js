@@ -33,6 +33,9 @@ const dev = {
     USER_POOL_ID: "eu-west-2_NqNqT5yfA",
     APP_CLIENT_ID: "6ea4loef5s22oq079vssqtnm6v",
     IDENTITY_POOL_ID: "eu-west-2:9e74db9e-a8c3-4887-81b7-5b973c6af647"
+  },
+  social: {
+    FB: "702023680442825"
   }
 };
 
@@ -51,6 +54,9 @@ const prod = {
     USER_POOL_ID: "eu-west-2_2kjw5HNNW",
     APP_CLIENT_ID: "4ak3ho44mt6a2os0b99n8s22ti",
     IDENTITY_POOL_ID: "eu-west-2:31bcec4e-0e64-43da-825b-78140d9cfb65"
+  },
+  social: {
+    FB: "702023680442825"
   }
 };
 

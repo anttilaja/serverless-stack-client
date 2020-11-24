@@ -8,6 +8,8 @@ import { Auth } from "aws-amplify";
 import { Link, useHistory } from "react-router-dom";
 import { onError } from "./libs/errorLib";
 import ErrorBoundary from "./components/ErrorBoundary";
+import config from "./config";
+
 
 
 
@@ -28,6 +30,7 @@ function App() {
   }, []);
 
   async function onLoad() {
+    this.loadFacebookSDK();
     try {
       await Auth.currentSession();
       userHasAuthenticated(true);
@@ -47,6 +50,29 @@ function App() {
     history.push("/login");
 
   }
+
+
+
+loadFacebookSDK() {
+  window.fbAsyncInit = function() {
+    window.FB.init({
+      appId            : config.social.FB,
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+}
+
+
 
   
   return (
