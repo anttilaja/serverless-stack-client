@@ -53,7 +53,7 @@ function App() {
 
 
 
-loadFacebookSDK() {
+function loadFacebookSDK() {
   window.fbAsyncInit = function() {
     window.FB.init({
       appId            : config.social.FB,
