@@ -11,7 +11,7 @@ import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
 import { Auth } from "aws-amplify";
-import FacebookButton from "../components/FacebookButton";.
+import FacebookButton from "../components/FacebookButton";
 
 import "./Signup.css";
 
