@@ -25,11 +25,10 @@ function App() {
   const [isAuthenticating, setIsAuthenticating] = useState(true);
   
 
+  
+  
   useEffect(() => {
-    onLoad();
-  }, []);
-
-  async function onLoad() {
+    const onLoad = async function () {
     loadFacebookSDK();
     try {
       await Auth.currentSession();
@@ -42,6 +41,14 @@ function App() {
     }
     setIsAuthenticating(false);
   }
+
+
+
+    onLoad();
+  }, []);
+
+
+  
 
 
   async function handleLogout() {
