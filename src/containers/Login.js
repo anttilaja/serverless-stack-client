@@ -6,7 +6,7 @@ import { useAppContext } from "../libs/contextLib";
 import { useFormFields } from "../libs/hooksLib";
 import { onError } from "../libs/errorLib";
 import "./Login.css";
-import FacebookButton from "../components/FacebookButton";.
+import FacebookButton from "../components/FaceBookButton";
 
 export default function Login() {
   const { userHasAuthenticated } = useAppContext();
@@ -34,11 +34,10 @@ export default function Login() {
     }
   }
 
-  handleFbLogin (){ 
-        (){
+  let handleFbLogin = function (){ 
+       
           this.props.userHasAuthenticated(true);
-        } 
-}
+    }
 
 
   return (

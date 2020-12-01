@@ -93,12 +93,10 @@ export default function Signup() {
     }
   }
 
-  function handleFbLogin () {
-    (){
-      this.props.userHasAuthenticated(true);
-    }
-  };
-
+  let handleFbLogin = function (){ 
+       
+          this.props.userHasAuthenticated(true);
+  }
 
   function renderConfirmationForm() {
     return (
