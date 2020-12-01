@@ -34,9 +34,11 @@ export default function Login() {
     }
   }
 
-  handleFbLogin = () => {
-  this.props.userHasAuthenticated(true);
-};
+  handleFbLogin (){ 
+        (){
+          this.props.userHasAuthenticated(true);
+        } 
+}
 
 
   return (
