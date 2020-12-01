@@ -95,12 +95,14 @@ export default function Signup() {
 
   let handleFbLogin = function (){ 
        
-          this.props.userHasAuthenticated(true);
+          userHasAuthenticated(true);
   }
 
   function renderConfirmationForm() {
     return (
       <form onSubmit={handleConfirmationSubmit}>
+        <FacebookButton
+          onLogin={handleFbLogin}/>
         <FormGroup controlId="confirmationCode" bsSize="large">
           <ControlLabel>Confirmation Code</ControlLabel>
           <FormControl

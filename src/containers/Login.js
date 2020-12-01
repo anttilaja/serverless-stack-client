@@ -35,16 +35,15 @@ export default function Login() {
   }
 
   let handleFbLogin = function (){ 
-       
-          this.props.userHasAuthenticated(true);
-    }
+       userHasAuthenticated(true);
+  }
 
 
   return (
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <FacebookButton
-          onLogin={this.handleFbLogin}/>
+          onLogin={handleFbLogin}/>
         <hr />
 
         <FormGroup controlId="email" bsSize="large">

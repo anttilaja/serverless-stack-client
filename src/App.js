@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   async function onLoad() {
-    this.loadFacebookSDK();
+    loadFacebookSDK();
     try {
       await Auth.currentSession();
       userHasAuthenticated(true);
@@ -53,7 +53,7 @@ function App() {
 
 
 
-function loadFacebookSDK() {
+let loadFacebookSDK = function () {
   window.fbAsyncInit = function() {
     window.FB.init({
       appId            : config.social.FB,
