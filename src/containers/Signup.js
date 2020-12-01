@@ -101,8 +101,6 @@ export default function Signup() {
   function renderConfirmationForm() {
     return (
       <form onSubmit={handleConfirmationSubmit}>
-        <FacebookButton
-          onLogin={handleFbLogin}/>
         <FormGroup controlId="confirmationCode" bsSize="large">
           <ControlLabel>Confirmation Code</ControlLabel>
           <FormControl
@@ -130,7 +128,7 @@ export default function Signup() {
     return (
       <form onSubmit={handleSubmit}>
          <FacebookButton
-          onLogin={this.handleFbLogin}/>
+          onLogin={handleFbLogin}/>
         <hr />
         <FormGroup controlId="email" bsSize="large">
           <ControlLabel>Email</ControlLabel>
