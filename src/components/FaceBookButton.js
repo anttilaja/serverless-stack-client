@@ -42,6 +42,7 @@ export default class FacebookButton extends Component {
   };
 
   handleClick = () => {
+    console.log('FB login clicked');
     window.FB.login(this.checkLoginState, {scope: "public_profile,email"});
   };
 

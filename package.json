@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "aws-amplify": "^3.3.22",
+    "aws-xray-sdk": "^3.2.0",
     "react": "^16.14.0",
     "react-bootstrap": "^0.33.1",
     "react-dom": "^16.14.0",
